@@ -92,11 +92,9 @@ let ballDirectionX = 1;
 let ballDirectionY = -1;
 let gameRunning = true;
 
-// Adjusted interval for smoother and slower gameplay
 setInterval(updateGame, 200);
 
-// Adjusted ball movement speed
-const ballSpeed = 1; // Increase this value to make the ball move faster, decrease for slower movement
+const ballSpeed = 1;
 
 onInput("a", () => {
   if (!gameRunning) return;
@@ -120,7 +118,6 @@ function updateGame() {
 
   const b = getFirst(ball);
 
-  // Adjust the ball's movement speed
   b.x += ballDirectionX * ballSpeed;
   b.y += ballDirectionY * ballSpeed;
 
